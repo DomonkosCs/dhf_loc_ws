@@ -1,0 +1,6 @@
+# ignore everything
+*
+
+# but don't ignore
+!.gitignore
+!dhf_los.rosinstall
