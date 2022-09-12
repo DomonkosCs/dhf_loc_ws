@@ -1,0 +1,5 @@
+repositories:
+  dhf_loc_ros:
+    type: git
+    url: https://github.com/DomonkosCs/dhf_loc_ros
+    version: main
