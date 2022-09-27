@@ -3,3 +3,11 @@ repositories:
     type: git
     url: https://github.com/DomonkosCs/dhf_loc_ros
     version: main
+  navigation:
+    type: git
+    url: https://github.com/ros-planning/navigation.git
+    version: noetic-devel
+  turtlebot3_simulations:
+    type: git
+    url: https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+    version: noetic-devel
