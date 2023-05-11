@@ -19,3 +19,7 @@ repositories:
     type: git
     url: https://github.com/DomonkosCs/turtlebot3_simulations.git
     version: noetic-devel
+  robot_pose_publisher:
+    type: git
+    url: https://github.com/GT-RAIL/robot_pose_publisher.git
+    version: develop
