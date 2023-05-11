@@ -9,7 +9,7 @@ repositories:
     version: noetic-devel
   navigation:
     type: git
-    url: https://github.com/ros-planning/navigation.git
+    url : https://github.com/DomonkosCs/navigation.git
     version: noetic-devel
   turtlebot3:
     type: git
