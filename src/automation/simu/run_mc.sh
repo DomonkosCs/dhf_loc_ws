@@ -35,26 +35,38 @@ do
 
 done
 
-# for ((k=1; k<=NUM_RUNS; k++))
-# do
-#     echo "Running launch file - Iteration $k"
+for ((k=1; k<=NUM_RUNS; k++))
+do
+    echo "Running launch file - Iteration $k"
 
-#     roslaunch dhf_loc dhf_localization_ekf_bag.launch info:=$info mc:=$((k+20)) bag:=$bag
+    roslaunch dhf_loc dhf_localization_ekf_bag.launch info:=$info mc:=$k bag:=$bag
 
-#     while [$(rosnode list | grep '/rosbag' | wc -l) -ne 0 ]; do
-#         sleep 1
-#     done
+    while [$(rosnode list | grep '/rosbag' | wc -l) -ne 0 ]; do
+        sleep 1
+    done
 
-# done
+done
 
-# for ((l=1; l<=NUM_RUNS; l++))
-# do
-#     echo "Running launch file - Iteration $l"
+for ((l=1; l<=NUM_RUNS; l++))
+do
+    echo "Running launch file - Iteration $l"
 
-#     roslaunch dhf_loc dhf_localization_amcl_bag.launch info:=$info mc:=$((l+20)) bag:=$bag
+    roslaunch dhf_loc dhf_localization_amcl_bag.launch info:=$info mc:=$l bag:=$bag
 
-#     while [$(rosnode list | grep '/rosbag' | wc -l) -ne 0 ]; do
-#         sleep 1
-#     done
+    while [$(rosnode list | grep '/rosbag' | wc -l) -ne 0 ]; do
+        sleep 1
+    done
 
-# done
+done
+
+for ((l=1; l<=NUM_RUNS; l++))
+do
+    echo "Running launch file - Iteration $l"
+
+    roslaunch dhf_loc dhf_localization_amclp_bag.launch info:=$info mc:=$l bag:=$bag
+
+    while [$(rosnode list | grep '/rosbag' | wc -l) -ne 0 ]; do
+        sleep 1
+    done
+
+done
